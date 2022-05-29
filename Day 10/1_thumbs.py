@@ -55,4 +55,4 @@ for i in range (0, max_duration):
         #print (f'frame at {i} seconds saved at {new_img_filepath}')
             new_img = Image.fromarray(frame) #useful for inference or to create new images
             new_img.save(new_img_filepath)
-    
+   
