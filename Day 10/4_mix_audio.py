@@ -38,4 +38,3 @@ final_clip.write_videofile(final_video_path, codec= 'libx264', audio_codec = 'aa
 # if the above doesn't work, try code below, before the upper 2 lines
 #new_audio = AudioFileClip(final_audio_path)
 #final_clip = video_clip.set_audio(new_audio)
-
