@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+fastapi = "*"
+moviepy = "*"
+pillow = "*"
+selenium = "*"
+requests = "*"
+jupyter = "*"
+pandas = "*"
+jupyterlab = "*"
+notebook = "*"
+unicorn = "*"
+uvicorn = "*"
+requests-html = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
