@@ -154,3 +154,4 @@ def automate_likes(browser):
                 parent_button.click()
             except:
                 pass
+            
