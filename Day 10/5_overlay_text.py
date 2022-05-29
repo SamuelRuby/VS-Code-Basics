@@ -58,3 +58,4 @@ overlay_clip = overlay_clip.set_audio(og_audio)
 
 final_clip = concatenate_videoclips([intro_text, overlay_clip])
 final_clip.write_videofile(final_video_path, codec='libx264', audio_codec="aac")
+
