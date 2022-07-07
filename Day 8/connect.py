@@ -2,8 +2,16 @@ from distutils import errors
 import requests
 import pprint
 import pandas as pd
-api_key = '1946ee6926cc640867e40a5d0a5d71c4'
-api_key_v4 = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxOTQ2ZWU2OTI2Y2M2NDA4NjdlNDBhNWQwYTVkNzFjNCIsInN1YiI6IjYyNmFkODYxMmQ1MzFhMDliZmQxNjIxOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.npC0Exhp7BQct8sdQvLjJj7CRZ5udf5Qpv9EAn1mKLc'
+
+import configparser
+config = configparser.ConfigParser()
+config.read('/Users/ruby/Desktop/VS-Code-Basics/credentials.ini') #PATH TO MY config file on my local device
+
+cred = config["MOVIEDB"]
+api_key = cred["MOVIE_API_KEY"]
+api_key_v4 = cred["MOVIE_API_KEY_V4"]
+
+
 
 #HTTP REQUESTS- Internet connection request
 #what's our endpoint or url?. get # -> Grab data. POST -> add/update data
@@ -15,7 +23,7 @@ api_key_v4 = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxOTQ2ZWU2OTI2Y2M2NDA4NjdlNDBhNWQwY
 """
 Endpoint
 /movie/{movie_id} #somewhat formatted path
-https://api.themoviedb.org/3/movie/550?api_key=1946ee6926cc640867e40a5d0a5d71c4
+https://api.themoviedb.org/3/movie/550?api_key=api_key
 """
 
 #HTTP Requests methods. GET, POST, PATCH, PUT, DELETE.

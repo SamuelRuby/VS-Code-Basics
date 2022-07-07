@@ -17,6 +17,7 @@ notebook = "*"
 unicorn = "*"
 uvicorn = "*"
 requests-html = "*"
+tweepy = "*"
 
 [dev-packages]
 

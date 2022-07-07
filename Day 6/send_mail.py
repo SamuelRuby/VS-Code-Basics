@@ -4,8 +4,19 @@ from email.mime.multipart import MIMEMultipart
 from templates import Template
 
 #declaring varaiables
-username = 'workwithrubyy@gmail.com'
-password = 'workwithruby22'
+
+
+import configparser
+config = configparser.ConfigParser()
+config.read('/Users/ruby/Desktop/VS-Code-Basics/credentials.ini') #PATH TO MY config file on my local device
+
+cred = config["GMAIL"]
+username = cred["USERNAME"]
+password = cred["PASSWORD"]
+
+#print(username)
+#print (password)
+
 msg = MIMEMultipart ('alternative')
 from_email = 'workwithruby <workwithrubyy@gmail.com>'
 to_emails = 'youreajockey@gmail.com'

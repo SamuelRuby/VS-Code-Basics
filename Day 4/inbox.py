@@ -1,10 +1,20 @@
 import imaplib
 import email
 
+import configparser
+config = configparser.ConfigParser()
+config.read('/Users/ruby/Desktop/VS-Code-Basics/credentials.ini') #PATH TO MY config file on my local device
+
+cred = config["GMAIL"]
+username = cred["USERNAME"]
+password = cred["PASSWORD"]
+
+#print(username)
+#print (password)
+
+
 #declaring varaiables
 host = 'imap.gmail.com' 
-username = 'workwithrubyy@gmail.com'
-password = 'workwithruby22'
 
 def get_inbox ():
     mail = imaplib.IMAP4_SSL(host)
